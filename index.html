@@ -139,37 +139,37 @@
     <!-- ==========================================
          TAB / SLIDE 1: SUMMARY (HERO SECTION)
          ========================================== -->
-    <section class="slide-panel active w-full h-full flex flex-col justify-between pt-20 md:pt-24 pb-0"
+    <section class="slide-panel active w-full h-full flex flex-col justify-between pt-16 md:pt-18 lg:pt-20 pb-0"
       id="slide-summary" role="tabpanel">
-      <div class="slide-scroll-area flex-1 w-full max-w-7xl mx-auto px-4 md:px-8 flex items-center">
+      <div class="slide-scroll-area flex-1 w-full max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-center">
         <!-- 2-Column Hero Layout -->
-        <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-end min-h-[calc(100vh-12rem)] py-4">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center py-2 lg:py-3">
 
           <!-- LEFT COLUMN: Profile Photo Cut-Out (Touches bottom) -->
           <div
-            class="lg:col-span-5 flex flex-col justify-end items-center lg:items-start h-full relative order-2 lg:order-1 pt-6 lg:pt-0">
+            class="lg:col-span-5 flex flex-col justify-end items-center lg:items-start h-full relative order-2 lg:order-1 pt-4 lg:pt-0">
             <!-- Subtle circular backdrop halo behind avatar -->
             <div
-              class="absolute bottom-6 left-1/2 -translate-x-1/2 lg:translate-x-0 w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-t from-blue-600/30 to-sky-300/20 filter blur-2xl -z-10">
+              class="absolute bottom-4 left-1/2 -translate-x-1/2 lg:translate-x-0 w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-t from-blue-600/30 to-sky-300/20 filter blur-2xl -z-10">
             </div>
 
-            <div class="profile-img-container w-full max-w-md lg:max-w-none">
+            <div class="profile-img-container w-full max-w-sm lg:max-w-none">
               <!-- Profile Cutout Photo (User Photo with Vector Fallback) -->
               <img src="assets/images/fotobiru_removebg.png"
                 onerror="this.onerror=null;this.src='assets/images/profile-placeholder.svg';"
                 alt="Ragil Eka Putra - Software Engineer"
-                class="max-h-[60vh] lg:max-h-[75vh] w-auto drop-shadow-2xl select-none object-contain object-bottom">
+                class="max-h-[46vh] sm:max-h-[50vh] lg:max-h-[56vh] xl:max-h-[60vh] w-auto drop-shadow-2xl select-none object-contain object-bottom">
 
               <!-- Floating Pill Accent (Experience / Availability) -->
               <div
-                class="absolute top-8 right-2 md:right-8 bg-slate-900/90 backdrop-blur-md border border-sky-400/50 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-lg flex items-center gap-2 anim-float">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                class="absolute top-4 right-1 md:right-4 bg-slate-900/90 backdrop-blur-md border border-sky-400/50 text-white px-3 py-1 rounded-full text-[11px] md:text-xs font-semibold shadow-lg flex items-center gap-2 anim-float">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                 <span>Open for Opportunities</span>
               </div>
 
               <!-- Floating Tech Badge (Campus & Location) -->
               <div
-                class="absolute bottom-8 left-2 md:left-6 bg-white/95 backdrop-blur-md border border-sky-200 text-slate-800 px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-lg flex items-center gap-2">
+                class="absolute bottom-4 left-1 md:left-4 bg-white/95 backdrop-blur-md border border-sky-200 text-slate-800 px-3 py-1 rounded-full text-[11px] md:text-xs font-semibold shadow-lg flex items-center gap-1.5">
                 <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-600"></i>
                 <span>Padang, Sumatera Barat</span>
               </div>
@@ -178,54 +178,53 @@
 
           <!-- RIGHT COLUMN: Giant Typography & Badge -->
           <div
-            class="lg:col-span-7 flex flex-col justify-center items-start h-full order-1 lg:order-2 pl-0 lg:pl-6 pb-4">
+            class="lg:col-span-7 flex flex-col justify-center items-start h-full order-1 lg:order-2 pl-0 lg:pl-6 pb-2">
 
             <!-- Sub-title Top: White text / Capsule -->
             <div
-              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/30 backdrop-blur-md border border-white/60 text-white font-semibold text-xs md:text-sm tracking-wider uppercase mb-3 shadow-sm">
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/30 backdrop-blur-md border border-white/60 text-white font-semibold text-xs tracking-wider uppercase mb-2 shadow-sm">
               <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
               <span>Full-Stack Web & Mobile Developer</span>
             </div>
 
             <!-- Giant Main Title: 2 lines, bold capital letters, white with drop shadow -->
             <div
-              class="hero-title-shadow font-extrabold text-white tracking-tight leading-[0.92] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mb-4 select-none">
+              class="hero-title-shadow font-extrabold text-white tracking-tight leading-[0.93] text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl mb-2.5 select-none">
               <span class="block">SOFTWARE</span>
               <span class="block text-sky-100">PORTFOLIO</span>
             </div>
 
             <!-- Badge Nama: Rounded-full capsule, glossy dark blue with bright blue border -->
-            <div class="glass-badge-name rounded-full px-5 py-2.5 md:px-7 md:py-3 mb-6 inline-flex items-center gap-3">
-              <i data-lucide="terminal" class="w-5 h-5 text-sky-400"></i>
-              <span class="text-white font-black tracking-widest text-sm md:text-lg uppercase">
+            <div class="glass-badge-name rounded-full px-4 py-1.5 md:px-5 md:py-2 mb-3 inline-flex items-center gap-2.5">
+              <i data-lucide="terminal" class="w-4 h-4 text-sky-400"></i>
+              <span class="text-white font-black tracking-widest text-xs md:text-sm uppercase">
                 RAGIL EKA PUTRA
               </span>
             </div>
 
             <!-- Short Professional Bio -->
             <p
-              class="text-white/90 text-sm md:text-base lg:text-lg max-w-xl font-medium leading-relaxed mb-6 drop-shadow-sm">
+              class="text-white/90 text-xs sm:text-sm md:text-sm lg:text-[15px] max-w-xl font-medium leading-relaxed mb-4 drop-shadow-sm">
               Mahasiswa Jurusan Teknologi Informasi Program Studi D3 Manajemen Informatika Politeknik Negeri Padang yang
-              berdedikasi dalam rekayasa sistem enterprise
-              berbasis web, aplikasi mobile terintegrasi, dan pengelolaan basis data dengan standar arsitektur modern.
+              berdedikasi dalam rekayasa sistem enterprise berbasis web, aplikasi mobile terintegrasi, dan pengelolaan basis data dengan standar arsitektur modern.
             </p>
 
             <!-- Action CTAs & Social Links -->
-            <div class="flex flex-wrap items-center gap-3.5 w-full">
+            <div class="flex flex-wrap items-center gap-2.5 md:gap-3 w-full">
               <button data-jump-slide="1"
-                class="px-6 py-3 rounded-full bg-white text-blue-700 font-bold text-sm shadow-lg hover:bg-sky-50 hover:shadow-xl hover:scale-105 transition-all flex items-center gap-2">
+                class="px-5 py-2.5 rounded-full bg-white text-blue-700 font-bold text-xs md:text-sm shadow-lg hover:bg-sky-50 hover:shadow-xl hover:scale-105 transition-all flex items-center gap-2">
                 <span>View Projects</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </button>
 
               <button data-jump-slide="3"
-                class="px-5 py-3 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white font-semibold text-sm border border-sky-400/40 shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+                class="px-4 py-2.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white font-semibold text-xs md:text-sm border border-sky-400/40 shadow-md hover:shadow-lg transition-all flex items-center gap-1.5">
                 <i data-lucide="mail" class="w-4 h-4 text-sky-400"></i>
                 <span>Contact Me</span>
               </button>
 
               <button
-                class="download-cv-btn px-4 py-3 rounded-full bg-white/20 hover:bg-white/30 text-white font-semibold text-sm border border-white/40 backdrop-blur-md transition-all flex items-center gap-2"
+                class="download-cv-btn px-4 py-2.5 rounded-full bg-white/20 hover:bg-white/30 text-white font-semibold text-xs md:text-sm border border-white/40 backdrop-blur-md transition-all flex items-center gap-1.5"
                 title="Unduh Curriculum Vitae">
                 <i data-lucide="file-down" class="w-4 h-4"></i>
                 <span>Download CV</span>
@@ -235,12 +234,12 @@
               <div class="flex items-center gap-2 ml-auto lg:ml-2">
                 <a href="https://github.com/agillcoyy" target="_blank" rel="noopener noreferrer"
                   title="GitHub: github.com/agillcoyy"
-                  class="p-2.5 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-md border border-white/30 transition-all">
+                  class="p-2 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-md border border-white/30 transition-all">
                   <i data-lucide="github" class="w-4 h-4"></i>
                 </a>
                 <a href="https://wa.me/6281364767900" target="_blank" rel="noopener noreferrer"
                   title="WhatsApp: +62 813 6476 7900"
-                  class="p-2.5 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-md border border-white/30 transition-all">
+                  class="p-2 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-md border border-white/30 transition-all">
                   <i data-lucide="message-circle" class="w-4 h-4"></i>
                 </a>
               </div>
@@ -252,7 +251,7 @@
       </div>
 
       <!-- Bottom Ticker / Highlight Bar: Pita Biru Glossy di Bagian Paling Bawah Layar -->
-      <footer class="glass-ticker w-full py-3 px-4 text-white z-20">
+      <footer class="glass-ticker w-full py-2.5 px-4 text-white z-20">
         <div
           class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs md:text-sm font-semibold tracking-wide lg:pr-48">
 

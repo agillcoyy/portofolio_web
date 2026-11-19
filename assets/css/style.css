@@ -205,12 +205,24 @@ body {
 }
 
 .profile-img-container img {
-  max-height: 82vh;
+  max-height: 48vh;
   width: auto;
   object-fit: contain;
   object-position: bottom;
   filter: drop-shadow(0 15px 25px rgba(15, 23, 42, 0.4));
   transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .profile-img-container img {
+    max-height: 56vh;
+  }
+}
+
+@media (min-width: 1280px) {
+  .profile-img-container img {
+    max-height: 60vh;
+  }
 }
 
 .profile-img-container:hover img {
