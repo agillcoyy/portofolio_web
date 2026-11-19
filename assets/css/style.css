@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap');
+
+:root {
+  --color-sky-light: #E0F2FE;
+  --color-sky-cyan: #38BDF8;
+  --color-blue-royal: #1D4ED8;
+  --color-blue-dark: #0284C7;
+  --color-slate-dark: #0F172A;
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  font-family: var(--font-main);
+  box-sizing: border-box;
+}
+
+/* Background Gradients & Ambient Lighting */
+body {
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 20%, #7DD3FC 55%, #1D4ED8 85%, #0F172A 100%);
+  background-attachment: fixed;
+  color: #0F172A;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Slide Deck Container */
+.slides-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (min-width: 1024px) {
+  .slide-viewport {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .slide-panel {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.98) translateY(12px);
+    transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.45s;
+    pointer-events: none;
+  }
+  .slide-panel.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 1023px) {
+  .slide-viewport {
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+  .slide-panel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .slide-panel.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+/* Floating 3D Star & Asterisk Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(8deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-10deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.anim-float {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.anim-float-reverse {
+  animation: floatReverse 8.5s ease-in-out infinite;
+}
+
+.anim-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+/* Glassmorphism Styles */
+.glass-pill-nav {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(186, 230, 253, 0.85);
+  box-shadow: 0 10px 30px -5px rgba(2, 132, 199, 0.18), 0 4px 10px -2px rgba(0, 0, 0, 0.05);
+}
+
+.glass-nav-active {
+  background: linear-gradient(135deg, #0284C7 0%, #1D4ED8 100%);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.glass-badge-name {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  border: 2px solid #38BDF8;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.glass-ticker {
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1.5px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.3);
+}
+
+/* Card Presentation Styles */
+.card-presentation {
+  background: #FFFFFF;
+  border: 2px solid #0284C7;
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 34px -8px rgba(2, 132, 199, 0.2), 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card-presentation:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(2, 132, 199, 0.3), 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-color: #0369A1;
+}
+
+/* Card Header Gradient */
+.card-header-gradient {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 50%, #1D4ED8 100%);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(224, 242, 254, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(2, 132, 199, 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(2, 132, 199, 0.8);
+}
+
+/* Drop shadow for massive titles */
+.hero-title-shadow {
+  text-shadow: 0 4px 18px rgba(15, 23, 42, 0.35), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Cutout Area */
+.profile-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.profile-img-container img {
+  max-height: 82vh;
+  width: auto;
+  object-fit: contain;
+  object-position: bottom;
+  filter: drop-shadow(0 15px 25px rgba(15, 23, 42, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.profile-img-container:hover img {
+  transform: scale(1.02);
+}
+
+/* Project Thumb Display */
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.65rem;
+  border: 1px solid #BAE6FD;
+  aspect-ratio: 16 / 10;
+  background-color: #0F172A;
+  cursor: default;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.project-thumb:hover img {
+  transform: scale(1.03);
+}
+
+.project-thumb .thumb-overlay {
+  display: none !important;
+}
+
+/* Modern modal transition */
+.modal-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content-box {
+  transform: scale(0.92) translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-content-box {
+  transform: scale(1) translateY(0);
+}

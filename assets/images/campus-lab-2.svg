@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="netGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="#F8FAFC"/>
+  <!-- Decorative top -->
+  <rect width="800" height="90" rx="16" fill="url(#netGrad)"/>
+  <text x="40" y="45" fill="#FFFFFF" font-family="sans-serif" font-weight="800" font-size="18">Laboratorium Jaringan & Virtualisasi Sistem — TI PNP</text>
+  <text x="40" y="70" fill="#BAE6FD" font-family="sans-serif" font-size="12">MikroTik WinBox, VirtualBox VM Management & Linux Server Configuration</text>
+
+  <!-- Left: WinBox / RouterOS Simulation GUI -->
+  <g transform="translate(40, 110)">
+    <rect width="340" height="360" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="340" height="34" rx="10" fill="#1E293B"/>
+    <text x="16" y="22" fill="#38BDF8" font-family="sans-serif" font-weight="700" font-size="11">MikroTik RouterOS v7 — WinBox Session</text>
+
+    <!-- Network Interface Table -->
+    <rect x="14" y="48" width="312" height="26" rx="4" fill="#E2E8F0"/>
+    <text x="24" y="65" fill="#334155" font-family="monospace" font-weight="700" font-size="10">INTERFACE     TYPE     IP ADDRESS       STATUS</text>
+    <text x="24" y="95" fill="#0F172A" font-family="monospace" font-size="10">ether1-wan    ether    192.168.1.10/24  Connected</text>
+    <text x="24" y="120" fill="#0F172A" font-family="monospace" font-size="10">ether2-lan    ether    10.10.20.1/24    Running</text>
+    <text x="24" y="145" fill="#0F172A" font-family="monospace" font-size="10">vlan-students vlan     10.10.30.1/24    Active</text>
+    <text x="24" y="170" fill="#0F172A" font-family="monospace" font-size="10">vlan-lecturer vlan     10.10.40.1/24    Active</text>
+
+    <!-- Bandwidth / Traffic Monitor Chart -->
+    <rect x="14" y="195" width="312" height="150" rx="6" fill="#0F172A"/>
+    <text x="24" y="218" fill="#38BDF8" font-family="sans-serif" font-weight="700" font-size="11">Real-Time Traffic Graph (Queue Tree)</text>
+    <path d="M24 320 Q60 270 100 290 T180 250 T260 280 T310 240 L310 330 L24 330 Z" fill="#0284C7" fill-opacity="0.3"/>
+    <path d="M24 320 Q60 270 100 290 T180 250 T260 280 T310 240" stroke="#38BDF8" stroke-width="2.5" fill="none"/>
+    <text x="24" y="325" fill="#94A3B8" font-family="monospace" font-size="9">Rx: 94.2 Mbps  Tx: 48.6 Mbps  Ping: 4ms</text>
+  </g>
+
+  <!-- Right: Virtualization & Server Infrastructure -->
+  <g transform="translate(410, 110)">
+    <rect width="350" height="360" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="350" height="34" rx="10" fill="#0F172A"/>
+    <text x="16" y="22" fill="#E2E8F0" font-family="sans-serif" font-weight="700" font-size="11">VirtualBox & Linux Server Stacks</text>
+
+    <g transform="translate(16, 50)">
+      <rect width="318" height="65" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="14" y="24" fill="#0284C7" font-family="sans-serif" font-weight="700" font-size="11">Ubuntu Server 24.04 LTS (VM Instance)</text>
+      <text x="14" y="44" fill="#64748B" font-family="sans-serif" font-size="10">NGINX Reverse Proxy, PHP 8.3-FPM, UFW Firewall.</text>
+    </g>
+
+    <g transform="translate(16, 125)">
+      <rect width="318" height="65" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="14" y="24" fill="#0284C7" font-family="sans-serif" font-weight="700" font-size="11">Debian 12 Database Node</text>
+      <text x="14" y="44" fill="#64748B" font-family="sans-serif" font-size="10">MySQL Cluster, Automated Backup Cron, Replication.</text>
+    </g>
+
+    <g transform="translate(16, 200)">
+      <rect width="318" height="65" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="14" y="24" fill="#0284C7" font-family="sans-serif" font-weight="700" font-size="11">WSL 2 Local Development Pod</text>
+      <text x="14" y="44" fill="#64748B" font-family="sans-serif" font-size="10">Bridged network adapter, Laragon & VS Code DevContainers.</text>
+    </g>
+
+    <rect x="16" y="280" width="318" height="60" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="26" y="304" fill="#1D4ED8" font-family="sans-serif" font-weight="700" font-size="11">Kompetensi Jaringan Teruji:</text>
+    <text x="26" y="324" fill="#1E40AF" font-family="sans-serif" font-size="10">VLAN Segregation • DHCP Snooping • NAT Masquerading</text>
+  </g>
+</svg>

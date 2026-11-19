@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="labBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="url(#labBg)"/>
+  
+  <!-- Window Header -->
+  <rect width="800" height="42" rx="16" fill="#1E293B"/>
+  <circle cx="24" cy="21" r="6" fill="#EF4444"/>
+  <circle cx="42" cy="21" r="6" fill="#F59E0B"/>
+  <circle cx="60" cy="21" r="6" fill="#10B981"/>
+  <text x="90" y="26" fill="#94A3B8" font-family="sans-serif" font-size="12">Lab Rekayasa Perangkat Lunak — Gedung C Jurusan TI Politeknik Negeri Padang</text>
+
+  <!-- Left: Code & Terminal Environment -->
+  <g transform="translate(30, 60)">
+    <rect width="360" height="400" rx="10" fill="#020617" stroke="#334155" stroke-width="1.5"/>
+    <rect width="360" height="34" rx="10" fill="#0F172A"/>
+    <text x="16" y="22" fill="#38BDF8" font-family="monospace" font-size="12">docker-compose.yml [Multi-Container]</text>
+    
+    <!-- Code lines -->
+    <text x="16" y="60" fill="#64748B" font-family="monospace" font-size="11">version: '3.8'</text>
+    <text x="16" y="80" fill="#38BDF8" font-family="monospace" font-size="11">services:</text>
+    <text x="32" y="100" fill="#818CF8" font-family="monospace" font-size="11">app-laravel:</text>
+    <text x="48" y="120" fill="#94A3B8" font-family="monospace" font-size="11">build: .</text>
+    <text x="48" y="140" fill="#94A3B8" font-family="monospace" font-size="11">ports: ["8000:80"]</text>
+    <text x="32" y="165" fill="#818CF8" font-family="monospace" font-size="11">db-mysql:</text>
+    <text x="48" y="185" fill="#94A3B8" font-family="monospace" font-size="11">image: mysql:8.0</text>
+    <text x="48" y="205" fill="#94A3B8" font-family="monospace" font-size="11">volumes: [db_data:/var/lib/mysql]</text>
+    
+    <!-- Terminal Output -->
+    <rect x="16" y="235" width="328" height="150" rx="6" fill="#0F172A" stroke="#1E293B"/>
+    <text x="26" y="260" fill="#10B981" font-family="monospace" font-size="11">✓ Container app-laravel Created</text>
+    <text x="26" y="280" fill="#10B981" font-family="monospace" font-size="11">✓ Container db-mysql Healthy [3306]</text>
+    <text x="26" y="300" fill="#38BDF8" font-family="monospace" font-size="11">✓ Migrations: 24 tables migrated (0.12s)</text>
+    <text x="26" y="325" fill="#E2E8F0" font-family="monospace" font-size="11">TI-PNP-Dev:~# php artisan test --parallel</text>
+    <text x="26" y="350" fill="#22C55E" font-family="monospace" font-weight="700" font-size="11">PASS Tests: 38 passed, 0 failed</text>
+    <text x="26" y="370" fill="#94A3B8" font-family="monospace" font-size="10">Duration: 1.48s | Memory: 32MB</text>
+  </g>
+
+  <!-- Right: Lab Practical Architecture -->
+  <g transform="translate(410, 60)">
+    <rect width="360" height="400" rx="10" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="360" height="44" rx="10" fill="url(#headerGrad)"/>
+    <text x="20" y="28" fill="#FFFFFF" font-family="sans-serif" font-weight="700" font-size="13">Praktikum Mandiri & Riset Terapan</text>
+
+    <!-- Lab Highlights -->
+    <g transform="translate(20, 60)">
+      <rect width="320" height="90" rx="8" fill="#F0F9FF" stroke="#BAE6FD"/>
+      <circle cx="28" cy="28" r="14" fill="#0284C7"/>
+      <text x="28" y="33" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="12" text-anchor="middle">1</text>
+      <text x="52" y="28" fill="#0369A1" font-family="sans-serif" font-weight="700" font-size="12">Full-Stack SDLC Lifecycle</text>
+      <text x="52" y="48" fill="#475569" font-family="sans-serif" font-size="10">Penerapan metodologi agile, perancangan schema database 3NF, dan CI/CD pipeline.</text>
+    </g>
+
+    <g transform="translate(20, 165)">
+      <rect width="320" height="90" rx="8" fill="#F0FDF4" stroke="#86EFAC"/>
+      <circle cx="28" cy="28" r="14" fill="#15803D"/>
+      <text x="28" y="33" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="12" text-anchor="middle">2</text>
+      <text x="52" y="28" fill="#166534" font-family="sans-serif" font-weight="700" font-size="12">Container & Orchestration</text>
+      <text x="52" y="48" fill="#475569" font-family="sans-serif" font-size="10">Isolasi microservice dengan Dockerfile kustom dan Docker Compose di lingkungan WSL 2.</text>
+    </g>
+
+    <g transform="translate(20, 270)">
+      <rect width="320" height="90" rx="8" fill="#FAF5FF" stroke="#D8B4FE"/>
+      <circle cx="28" cy="28" r="14" fill="#7E22CE"/>
+      <text x="28" y="33" fill="#FFFFFF" font-family="sans-serif" font-weight="900" font-size="12" text-anchor="middle">3</text>
+      <text x="52" y="28" fill="#6B21A8" font-family="sans-serif" font-weight="700" font-size="12">Database Optimization</text>
+      <text x="52" y="48" fill="#475569" font-family="sans-serif" font-size="10">Query indexing, stored procedures, dan manajemen relasi foreign key berkecepatan tinggi.</text>
+    </g>
+
+    <text x="20" y="385" fill="#64748B" font-family="sans-serif" font-weight="600" font-size="11">Politeknik Negeri Padang • Jurusan Teknologi Informasi</text>
+  </g>
+</svg>
